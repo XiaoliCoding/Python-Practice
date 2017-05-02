@@ -76,4 +76,3 @@ def createPlot(inTree):
 def retrieveTree(i):
 	listOfTrees =[{'no surfacing':{0:'no',1:{'flippers':{0:'no',1:'yes'}}}},{'no surfacing':{0:'no',1:{'flippers':{0:{'head':{0:'no',1:'yes'}},1:'no'}}}}]
 	return listOfTrees[i]
-

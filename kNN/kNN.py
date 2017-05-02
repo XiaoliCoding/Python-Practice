@@ -1,6 +1,7 @@
 from numpy import *
 import operator
 from os import listdir
+import matplotlib.pyplot as plt 
 
 def createDataSet():
 	group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
@@ -104,3 +105,12 @@ def handwritingClassTest():
 		if(classifierResult != classNumStr):errorCount += 1.0
 	print "\nthe total number of errors is:%d"%errorCount
 	print "\nthe total error rate is:%f"%(errorCount/float(mTest))
+
+if __name__ == '__main__':
+	datingDataMat,datingLabels = file2matrix('datingTestSet2.txt')
+	fig = plt.figure()
+	ax = fig.add_subplot(111)
+	#ax.scatter(datingDataMat[:,1],datingDataMat[:,2])
+	ax.scatter(datingDataMat[:,1],datingDataMat[:,2],15.0*array(datingLabels),15.0*array(datingLabels))
+	plt.show()
+
